@@ -91,19 +91,6 @@ function renderTodos(todos) {
 
     li.appendChild(divBtn);
 
-    //     li.innerHTML = `
-    //     <div class="text">
-    //     <input type="checkbox" class="checkbox" ${checked} />
-    //     <input type="text" class="readonly" value="${item.name}" readonly />
-    //     </div>
-    //     <div class="btn">
-    //     <button class="edit-button">
-    //     <i class="fa-regular fa-pen-to-square"></i>
-    //     </button>
-    //     <button class="delete-button">
-    //     <i class="fa-solid fa-trash"></i>
-    //     </button>
-    //   </div>`;
     BtnEdit.addEventListener("click", (e) => {
       let input = e.target.parentElement.parentElement.children[0].children[1];
       if (input.hasAttribute("readonly")) {
@@ -155,26 +142,3 @@ function deleteTodo(id) {
   });
   addToLocalStorage(todos);
 }
-// const editBtns = document.querySelectorAll(".edit-button");
-// const inputs = document.querySelectorAll(".readonly");
-
-// editBtns.forEach((editButton) => {
-//   editButton.addEventListener("click", (e) => {
-//     const item = e.target.closest(".item").querySelector(".readonly");
-//     if (item.hasAttribute("readonly")) {
-//       item.removeAttribute("readonly");
-//       item.style.color = "rgba(0, 0, 0, 0.4)";
-//       item.focus();
-//     } else {
-//       const itemId = e.target.closest(".item").getAttribute("data-key");
-//       item.setAttribute("readonly", "readonly");
-//       item.style.color = "black";
-//       todos.forEach((todo) => {
-//         if (todo.id == itemId) {
-//           todo.name = item.value;
-//         }
-//       });
-//       addToLocalStorage(todos);
-//     }
-//   });
-// });

@@ -119,4 +119,13 @@ body {
 .checked {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
